@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oziq-ovqat Registratsiyasi</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #19ac23, #e5d4cb);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #58ee4d;
+            font-size: 1.8rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select, textarea {
+            width: 80%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #ff7e5f;
+            box-shadow: 0 0 8px rgba(255, 126, 95, 0.5);
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            width: 100%;
+            background: linear-gradient(135deg, #039314, #7def83);
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #feb47b, #ff7e5f);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(255, 126, 95, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Oziq-ovqat Registratsiyasi</h2>
+        <form action="/submit" method="post">
+            <label for="name">Ism</label>
+            <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+
+            <label for="phone">Telefon raqam</label>
+            <input type="tel" id="phone" name="phone" placeholder="Telefon raqamingizni kiriting" required>
+
+            <label for="address">Manzil</label>
+            <textarea id="address" name="address" placeholder="Manzilingizni kiriting" required></textarea>
+
+            <label for="food">Tanlangan oziq-ovqat</label>
+            <select id="food" name="food" required>
+                <option value="" disabled selected>Oziq-ovqat tanlang</option>
+                <option value="meva">Mevalar</option>
+                <option value="sabzavot">Sabzavotlar</option>
+                <option value="non">Non</option>
+                <option value="sut">Sut mahsulotlari</option>
+            </select>
+
+            <button type="submit">Yuborish</button>
+        </form>
+    </div>
+</body>
+</html>
